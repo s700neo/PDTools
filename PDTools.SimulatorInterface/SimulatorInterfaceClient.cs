@@ -178,8 +178,8 @@ public class SimulatorInterfaceClient : IDisposable
 
         return PacketType switch
         {
-            SimInterfacePacketType.PacketType1 => 0x128,
-            SimInterfacePacketType.PacketType2 => 0x13C,
+            SimInterfacePacketType.PacketType1 => 0x128 | 0x94,
+			SimInterfacePacketType.PacketType2 => 0x13C,
             SimInterfacePacketType.PacketType3 => 0x158,
             _ => 0x128,
         };
